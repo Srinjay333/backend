@@ -44,7 +44,7 @@ const server= app.listen(PORT,console.log(`server started at ${PORT}`));
 const io=require('socket.io')(server,{
    pingTimeout:60000,//pingTimeout means if for 60s  and user did not any message then it will close the connection to save the bandwidth
    cors:{
-      origin:"http://localhost:3000"
+      origin:`${process.env.front_url}`
    }
 })
 
